@@ -1,0 +1,13 @@
+<h2>All my posts</h2><br>
+<% @post.each do |post| %><br>
+    <ul>
+    	<strong><%= image_tag post.image.url(:small) %></strong>
+	    <li><strong>Location: </strong><%= post.location %></li>
+	    <li><strong>Post id: </strong><%= post.id %></li>
+	    <li><strong>Price: </strong><%= post.price %></li>
+	    <li><strong>Rating: </strong><%= post.rating %></li>
+	    <li><strong>Description: </strong><%= post.description %></li>
+	</ul>
+	<%= link_to 'Edit Post', edit_post_path(post) %><br />
+	<%= link_to 'Delete This Post', post_path(post.id), method: :delete, data: { confirm: 'Are you sure?' } %><hr>   
+<% end %>

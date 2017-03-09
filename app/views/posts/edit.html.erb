@@ -1,0 +1,24 @@
+<h1>Edit post</h1>
+
+<%= form_for @post, :url => post_path(@post) do |f| %>
+ <% if @post.errors.any? %>
+ <div id="error_explanation">
+  <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  <ul>
+   <% @post.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+   <% end %>
+  </ul>
+ </div>
+ <% end %>
+
+ <p><%= f.file_field :image %></p>
+ <p><%= f.text_field :location, placeholder: "location"%></p>
+ <p><%= f.text_field :price, placeholder: "price"%></p>
+ <p><%= f.text_field :rating, placeholder: "rating"%></p>
+ <p><%= f.text_area :description, placeholder: "description"%></p>
+ <p><%= f.hidden_field :user_id, value: @user_id %></p>
+ <p><%= f.submit %></p>
+
+<% end %>
+  

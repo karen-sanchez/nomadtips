@@ -1,0 +1,10 @@
+<h2>All posts</h2><br>
+<% @post.each do |post| %><br>
+    <ul>
+    	<strong><%= image_tag post.image.url(:small) %></strong>
+	    <li><strong>Location: </strong><%= post.location %></li>
+	    <li><strong>Price: </strong><%= post.price %></li>
+	    <li><strong>Rating: </strong><%= post.rating %></li>
+	    <li><strong>Description: </strong><%= post.description %></li>
+	</ul>   
+<% end %>
