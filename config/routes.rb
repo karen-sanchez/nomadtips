@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   get '/posts/show' 
 
   patch 'posts/:id', controller: 'posts', action: :update
+
 end

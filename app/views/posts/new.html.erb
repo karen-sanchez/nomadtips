@@ -16,10 +16,16 @@
 	<% end %>
 
 	<p><%= f.file_field :image %></p>
-	<p><%= f.text_field :location, placeholder: "location"%></p>
+	<div class="country">
+	<%= f.select :location, options_for_select(CS.countries.values.each) %>
+	<!-- <%= f.select :location, options_for_select(CS.states('#holder.val()').values.each) %> -->
+	</div>
 	<p><%= f.text_field :price, placeholder: "price"%></p>
 	<p><%= f.text_field :rating, placeholder: "rating"%></p>
 	<p><%= f.text_area :description, placeholder: "description"%></p>
 	<p><%= f.hidden_field :user_id, value: @user_id %></p>
 	<p><%= f.submit %></p>
 <% end %>
+
+
+

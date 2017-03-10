@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
+		# CS.states(:us) = CS.states(:us)
 	end
 
 	def create
