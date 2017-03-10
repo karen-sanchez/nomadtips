@@ -4,7 +4,7 @@
     	<strong><%= image_tag post.image.url(:small) %></strong>
     	<li><strong>Posted by: </strong><%= post.user.username %></li>
 	    <li><strong>Location: </strong><%= post.location %></li>
-	    <li><strong>Price: </strong><%= post.price %></li>
+	    <li><strong>Price: $</strong><%= post.price.to_i %></li>
 	    <li><strong>Rating: </strong><%= post.rating %></li>
 	    <li><strong>Description: </strong><%= post.description %></li>
 	    <%= link_to "View profile", user_path(post.user.username) %>
