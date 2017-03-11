@@ -1,33 +1,34 @@
-<h2>New post</h2>
-<%= form_for @post, html: { multipart: true } do |f| %>
+<div class="container">
+	<h2>New post</h2>
+	<%= form_for @post, html: { multipart: true } do |f| %>
 
-	<% if @post.errors.any? %>
-	  <div id="error_explanation">
-	    <h2>
-	      <%= pluralize(@post.errors.count, "error") %> prohibited
-	      this post from being saved:
-	    </h2>
-	    <ul>
-	      <% @post.errors.full_messages.each do |msg| %>
-	        <li><%= msg %></li>
-	      <% end %>
-	    </ul>
-	  </div>
+		<% if @post.errors.any? %>
+		  <div id="error_explanation">
+		    <h2>
+		      <%= pluralize(@post.errors.count, "error") %> prohibited
+		      this post from being saved:
+		    </h2>
+		    <ul>
+		      <% @post.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+		    </ul>
+		  </div>
+		<% end %>
+
+		<p><%= f.file_field :image %></p>
+		<div class="country">
+		<%= f.select :location, options_for_select(CS.countries.values.each) %>
+		<!-- <%= f.select :location, options_for_select(CS.states('#holder.val()').values.each) %> -->
+		</div>
+		<p><%= f.text_field :price, placeholder: "Price"%></p>
+
+		<p><%= f.select(:rating, options_for_select([[1],[2],[3],[4],[5]])) %></p>
+
+		<p><%= f.text_area :description, placeholder: "Description"%></p>
+		<p><%= f.hidden_field :user_id, value: @user_id %></p>
+		<p><%= f.submit %></p>
 	<% end %>
-
-	<p><%= f.file_field :image %></p>
-	<div class="country">
-	<%= f.select :location, options_for_select(CS.countries.values.each) %>
-	<!-- <%= f.select :location, options_for_select(CS.states('#holder.val()').values.each) %> -->
-	</div>
-	<p><%= f.text_field :price, placeholder: "Price"%></p>
-
-	<p><%= f.select(:rating, options_for_select([[1],[2],[3],[4],[5]])) %></p>
-
-	<p><%= f.text_area :description, placeholder: "Description"%></p>
-	<p><%= f.hidden_field :user_id, value: @user_id %></p>
-	<p><%= f.submit %></p>
-<% end %>
-
+</div>
 
 
