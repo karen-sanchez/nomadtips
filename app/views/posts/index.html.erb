@@ -1,3 +1,4 @@
+<div class="container">
 <h2>Posts by all users</h2><br>
 <% @post.each do |post| %><br>
     <ul>
@@ -10,3 +11,4 @@
 	    <%= link_to "View profile", user_path(post.user.username) %>
 	</ul>   
 <% end %>
+</div>
