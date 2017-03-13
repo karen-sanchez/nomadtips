@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post = current_user.posts
+		@post = current_user.posts.order("created_at DESC")
 	end
 
 	def edit
