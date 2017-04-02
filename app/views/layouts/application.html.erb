@@ -9,11 +9,11 @@
 
   <body>
 
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <nav class="navbar navbar-toggleable-md navbar-custom">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <%= link_to "BRAND", root_path, class: "nav-link" %>
+    <%= link_to "BRAND", root_path, class: "nav-link brand-placeholder" %>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <% if user_signed_in? %>
     <div class="mr-auto"></div>
@@ -45,12 +45,15 @@
       </ul>
       <% else %>
       <div class="mr-auto"></div>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav guest-navbar">
         <li class="nav-item">
-          <%= link_to "Signup", new_user_registration_path, class: "nav-link" %>
+          <%= link_to "Latest Posts", posts_index_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link"  %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Signup", new_user_registration_path, :method => "get", class: 'btn btn-danger navbar-btn custom-btn' %>
         </li>
       </ul>
       <% end %>

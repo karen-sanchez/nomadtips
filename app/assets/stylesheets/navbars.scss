@@ -2,4 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.navbar-custom{
+	background-color: #86cccc !important;
+}
+.brand-placeholder{
+	font-size: 2em;
+	color: khaki;
+}
+.custom-btn{
+	height: 3em;
+	width: 6em;
+}
+.navbar a{
+	color: darkslategrey !important;
+}
+.navbar ul li{
+	margin: 0em 1.5em 0em 1.5em;
+}
+.navbar ul li:nth-child(1):hover{
+	border-bottom: 3px solid khaki;
+}
+.navbar ul li:nth-child(2):hover{
+	border-bottom: 3px solid khaki;
+}
 
