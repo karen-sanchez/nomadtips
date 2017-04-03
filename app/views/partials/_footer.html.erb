@@ -1,42 +1,47 @@
 <footer class="footer">
   <div class="container-fluid">
 	  <div class="row">
-	    <div class="col vertical-center-logo">
+	    <div class="col-lg-3 col-md-3 col-sm-3 col-6 vertical-center-logo">
 	    	<div class="logo"></div>
 	    </div>
-	    <div class="col vertical-center">
+	    <div class="col-lg-3 col-md-3 col-sm-3 col-6 vertical-center">
 	    	<ul>
 	    		<li>Careers</li>
 	    		<li>FAQ</li>
 	    		<li>Contact</li>
 	    	</ul>
 	    </div>
-	    <div class="col vertical-center">
+	    <div class="col-lg-3 col-md-3 col-sm-3 col-6 vertical-center">
 	    	<ul>
 	    		<li>Terms</li>
 	    		<li>Privacy</li>
 	    		<li>Blog</li>
 	    	</ul>
-	    </div>
-<!-- 	    <div class="col vertical-center-social social-icons">
-	    	<ul>
-	    		<li>FB</li>
-	    		<li>TW</li>
-	    		<li>YT</li>
-	    		<li>IG</li>
-	    	</ul>
-	    </div> -->
-        <div class="col vertical-center-social social-icons">
-        <img src="assets/yt.svg" width="50px" height="50px">
-        <img src="assets/fb.png" width="35px" height="35px">
-        <img src="assets/twt.svg" width="50px" height="50px">
-        <img src="assets/ig.svg" width="50px" height="50px">
-            <div>
-                <%= link_to "", "https://www.facebook.com/", :target => "_blank", :class => "fb-icon" %>
-                <%= link_to "", "https://www.instagram.com/", :target => "_blank", :class => "tw-icon" %>
-                <%= link_to "", "https://www.linkedin.com/", :target => "_blank", :class => "yt-icon" %>
-                <%= link_to "", "https://www.twitter.com/", :target => "_blank", :class => "ig-icon" %>
-            </div>
+	    </div>	
+        <div class="col-lg-3 col-md-3 col-sm-3 col-6 vertical-center-social social-icons">
+        	<ul>
+        	  <li>
+        	    <%= link_to "http://www.youtube.com/" do %>
+        	      <%= image_tag 'yt.svg', class: "resize" %>
+        	    <% end %>
+        	  </li>
+        	  <li>
+        	    <%= link_to "http://www.facebook.com/" do %>
+        	      <%= image_tag 'fb.png', class: "resize-fb"  %>
+        	    <% end %>
+        	  </li>
+        	  <li>
+        	    <%= link_to "http://www.twitter.com/" do %>
+        	      <%= image_tag 'twt.svg', class: "resize"  %>
+        	    <% end %>
+        	  </li>
+        	  <li>
+        	    <%= link_to "http://www.instagram.com/" do %>
+        	      <%= image_tag 'ig.svg', class: "resize"  %>
+        	    <% end %>
+        	  </li>
+
+        	</ul>
         </div>
 	  </div>
   </div>
