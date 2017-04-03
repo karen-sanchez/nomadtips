@@ -5,6 +5,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One|Comfortaa"" rel="stylesheet">
   </head>
 
   <body>
@@ -46,9 +47,6 @@
       <% else %>
       <div class="mr-auto"></div>
       <ul class="navbar-nav guest-navbar">
-        <li class="nav-item">
-          <%= link_to "Latest Posts", posts_index_path, class: "nav-link" %>
-        </li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link"  %>
         </li>

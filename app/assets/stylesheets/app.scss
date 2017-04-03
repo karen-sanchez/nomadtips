@@ -1,3 +1,4 @@
+*{ font-family: 'Comfortaa', cursive; }
 header{
 	max-width: 100%;
   	height: 100vh;
@@ -14,6 +15,7 @@ header h1{
 	color: whitesmoke;
 	position: relative;
 	z-index: 4;
+	font-family: 'Paytone One', sans-serif;
 }
 .intro{
 	padding: 4em 4em;
@@ -52,6 +54,14 @@ header h1{
 	background-color: #766c90;
 	padding: 1em 1em;
 }
+.reviews-title > h1{
+	font-size: 3em;
+	font-family: 'Paytone One', sans-serif;
+	color: #280c37;
+}
+.second-row-reviews, .first-row-reviews{
+	padding: 2em 2em;
+}
 .footer {
 	width: 100%;
 	height: 250px;
@@ -62,11 +72,18 @@ header h1{
 .footer ul li {
 	display: block;
 	text-decoration: none;
+	color: whitesmoke;
 }
 .footer ul li:hover {
-	text-decoration: underline;
 	cursor: pointer;
+	color: gold;
 }
+.fb-icon {
+   background: url('fb.png');
+   height: 20px;
+   width: 20px;
+}
+
 .vertical-center {
 	padding-top: 5em;
 }
@@ -87,12 +104,12 @@ header h1{
 	padding-top: 5em;
 }
 .travel-box{
-	border: 1px solid #DA627D;
+	border: 1px solid #766c90;
 }
 .enjoy-box{
-	border: 1px solid #9A348E;
+	border: 1px solid #766c90;
 }
 .share-box{
-	border: 1px solid #AFF9C9;
+	border: 1px solid #766c90;
 }
 
