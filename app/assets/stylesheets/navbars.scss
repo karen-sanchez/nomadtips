@@ -15,6 +15,7 @@
 	color: darkslategrey !important;
 	background-color: #ffdf3b !important;
 	border: none !important;
+	text-decoration: none !important;
 }
 .navbar a{
 	color: darkslategrey !important;
@@ -22,7 +23,22 @@
 .navbar ul li{
 	margin: 0em 1.5em 0em 1.5em;
 }
-.navbar ul li:nth-child(1){
+.userNav ul li:nth-child(-n+4){
 	border-bottom: 3px solid khaki;
 }
-
+.guestNav ul li:nth-child(1){
+	border-bottom: 3px solid khaki;
+}
+.menu-bars{
+	color: gold;
+}
+.navbar-toggler{
+	padding: 0.7em 0.7em !important;
+}
+@media (max-width: 767px){
+	.navbar ul li:nth-child(n+1){
+		color: gold;
+		font-size: 2em;
+		text-align: center;
+	}
+}

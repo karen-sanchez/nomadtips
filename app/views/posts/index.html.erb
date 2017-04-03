@@ -1,14 +1,19 @@
-<div class="container">
-<h2>Posts by all users</h2><br>
-<% @post.each do |post| %><br>
-    <ul>
-    	<strong><%= image_tag post.image.url(:small) %></strong>
-    	<li><strong>Posted by: </strong><%= post.user.username %></li>
-	    <li><strong>Location: </strong><%= post.location %></li>
-	    <li><strong>Price: $</strong><%= post.price.to_i %></li>
-	    <li><strong>Rating: </strong><%= post.rating %></li>
-	    <li><strong>Description: </strong><%= post.description %></li>
-	    <%= link_to "View profile", user_path(post.user.username) %>
-	</ul>   
-<% end %>
-</div>
+ <div class="container">
+ 	<h2 align="center">Latest posts</h2>
+	<% @post.each do |post| %><br>
+		<div class="row">
+		    	<div class="col">
+			    	<strong><%= image_tag post.image.url(:medium) %></strong>
+			    </div>
+
+			    <div class="col jumbotron">
+	    	    	<li><strong>Posted by: </strong><%= post.user.username %></li>
+	    		    <li><strong>Location: </strong><%= post.location %></li>
+	    		    <li><strong>Price: $</strong><%= post.price.to_i %></li>
+	    		    <li><strong>Rating: </strong><%= post.rating %></li>
+			    	<p><strong>Description: </strong><%= post.description %></p>
+			    	<%= link_to "View profile", user_path(post.user.username) %>
+			    </div>	
+		</div><!-- row -->
+	 <% end %>
+</div><!-- container --> 
