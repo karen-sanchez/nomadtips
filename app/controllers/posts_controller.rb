@@ -36,7 +36,7 @@ class PostsController < ApplicationController
 
 		if @post.update(params[:post].permit(:image, :location, :price, :rating, :description))
 			flash[:notice] = "Success"
-			redirect_to '/'
+			redirect_to posts_show_path
 		else
 			flash[:notice] = "Not saved"
 			render '/'
