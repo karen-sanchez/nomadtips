@@ -1,24 +1,22 @@
 <div class="container">
-	<div class="row">
-		<h2>All my posts</h2>
-			<% @post.each do |post| %>
-				<div class="col-md-12">
-				
-						<div class="col-md-6">
-					    	<%= image_tag post.image.url(:small) %> <br />
-						    <strong>Location: </strong><%= post.location %>	<br />	  
-						    <strong>Price: $</strong><%= post.price.to_i %>	<br />	  
-						    <strong>Rating: </strong><%= post.rating %> <br />	  
-						</div>  
-					    <div class="col-md-6">	
-							<strong>Description: </strong><%= post.description %>
-							<%= link_to 'Edit Post', edit_post_path(post) %>
-							<%= link_to 'Delete This Post', post_path(post.id), method: :delete, data: { confirm: 'Are you sure?' } %> 
-						</div> 
 
-				</div>
+		<h2 align="center" class="my-5">Here are your posts <%= @user %> </h2>
+			<% @post.each do |post| %>
+			<div class="row">
+				<div class="col">
+			    	<%= image_tag post.image.url(:medium) %> <br />  
+				</div>  
+			    <div class="col jumbotron">
+				    <strong>Location: </strong><%= post.location %>	<br />	  
+				    <strong>Price: $</strong><%= post.price.to_i %>	<br />	  
+				    <strong>Rating: </strong><%= post.rating %> <br />		
+					<strong>Description: </strong><%= post.description %><br />
+					<%= link_to 'Edit Post', edit_post_path(post) %><br />
+					<%= link_to 'Delete This Post', post_path(post.id), method: :delete, data: { confirm: 'Are you sure?' } %> 
+				</div> 
+			</div><br />	
 			<% end %>
-	</div>
+
 </div>
 
 

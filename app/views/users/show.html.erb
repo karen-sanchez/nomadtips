@@ -1,8 +1,30 @@
 <div class="container">
-<strong><%= image_tag @user.thumbnail.url(:thumb) %></strong><br>
-Username: <strong><%= @user.username %></strong><br />
-Nationality: <strong><%= @user.nationality %></strong><br />
-About: <strong><%= @user.about %></strong>
+	<h2 class="my-5" align="center">Welcome <%= @user.username %></h2>
+	<div class="col">
+		<div align="center" class="my-5"><%= image_tag @user.thumbnail.url(:thumb), :class => "rounded-circle" %></div>
+		<table class="table table-bordered">
+		  <thead>
+		    <tr>
+		      <th class="bg-success">First Name</th>
+		      <th class="bg-warning">Last Name</th>
+		      <th class="bg-info">Username</th>
+		      <th class="bg-primary">Nationality</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">Alan</th>
+		      <td>Estrada</td>
+		      <td><%= @user.username %></td>
+		      <td><%= @user.nationality %></td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+	<div class="col jumbotron">
+		<p><%= @user.about %></p>
+	</div>
 </div>
-
-
+<!-- 		<h4>Username:</h4><%= @user.username %><br />
+		Nationality: <strong><%= @user.nationality %></strong><br />
+		About: <strong><%= @user.about %></strong> -->

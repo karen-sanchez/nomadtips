@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = current_user.posts.order("created_at DESC")
+		@user = current_user.username
 	end
 
 	def edit
