@@ -2,7 +2,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars fa-2x menu-bars" aria-hidden="true"></i>
     </button>
-    <%= link_to "Backpacker", root_path, class: "nav-link brand-placeholder" %>
+    <%= link_to image_tag("logo200.png"), root_path, class: "nav-link brand-placeholder" %>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <% if user_signed_in? %>
     <div class="mr-auto"></div>
