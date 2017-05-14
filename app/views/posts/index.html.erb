@@ -7,13 +7,15 @@
 			    </div>
 
 			    <div class="col jumbotron">
-	    	    	<li><strong>Posted by: </strong><%= post.user.username %></li>
-	    		    <li><strong>Location: </strong><%= post.location %></li>
-	    		    <li><strong>Price: $</strong><%= post.price.to_i %></li>
-	    		    <li><strong>Rating: </strong><%= post.rating %></li>
+	    	    	<strong>Posted by: </strong><%= post.user.username %><br>
+	    		    <strong>Location: </strong><%= post.location %><br>
+	    		    <strong>Price: $</strong><%= post.price.to_i %><br>
+	    		    <strong>Rating: </strong><%= post.rating %>
 			    	<p><strong>Description: </strong><%= post.description %></p>
+			    	<p>*Photo credit:<a href="https://www.alanxelmundo.com"> Alan Estrada</p>
 			    	<%= link_to "View profile", user_path(post.user.username) %>
 			    </div>	
 		</div><!-- row -->
 	 <% end %>
 </div><!-- container --> 
+</br>
