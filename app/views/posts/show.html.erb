@@ -4,7 +4,7 @@
 			<% @post.each do |post| %>
 			<div class="row">
 				<div class="col">
-			    	<%= image_tag post.image.url(:medium) %> <br />  
+			    	<%= image_tag post.image.url(:medium), class: "mobile-width" %> <br />  
 				</div>  
 			    <div class="col jumbotron">
 				    <strong>Location: </strong><%= post.location %>	<br />	  

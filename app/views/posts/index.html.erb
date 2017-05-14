@@ -3,7 +3,7 @@
 	<% @post.each do |post| %><br>
 		<div class="row">
 		    	<div class="col">
-			    	<strong><%= image_tag post.image.url(:medium) %></strong>
+			    	<strong><%= image_tag post.image.url(:medium), class: "mobile-width" %></strong>
 			    </div>
 
 			    <div class="col jumbotron">
